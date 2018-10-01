@@ -13,8 +13,13 @@
     height: 100%;
     width: 8%;
     border: 1px solid white;
+    position: relative;
    
-   
+}
+#blackBtn{
+    position: absolute;
+    left: 5%;
+    top: 50%;
 }
 
 
@@ -125,3 +130,158 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
+
+.left-wrap {
+	perspective: 800px;
+    perspective-origin: 50% 100px;
+    position: absolute;
+    top: 210px;
+    left: 44%;
+}
+.right-wrap{
+    perspective: 800px;
+    perspective-origin: 50% 100px;
+    position: absolute;
+    top: 210px;
+    right: 44%;
+}
+
+
+.cube1 {
+	position: relative;
+	width: 30px;
+    transform-style: preserve-3d;
+    margin: 30px auto;
+   
+}
+.cube2 {
+	position: relative;
+	width: 30px;
+    transform-style: preserve-3d;
+    margin: 30px auto;
+   
+}
+
+
+.cube1 div {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+.cube2 div {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+
+
+.backSide {
+    transform: translateZ(-15px) rotateY(180deg);
+    background: white;
+  
+}
+.rightSide {
+	transform: rotateY(-270deg) translateX(15px);
+    transform-origin: top right;
+    background: white;
+   
+}
+.leftSide {
+	transform: rotateY(270deg) translateX(-15px);
+    transform-origin: center left;
+    background: white;
+}
+.topSide {
+	transform: rotateX(-90deg) translateY(-15px);
+    transform-origin: top center;
+    background: white;
+}
+.bottomSide {
+	transform: rotateX(90deg) translateY(15px);
+    transform-origin: bottom center;
+    background: white;
+    background-image: url('../img/two.png')
+}
+.frontSide {
+    transform: translateZ(15px);
+    background: white;
+}
+
+.frontSide img{
+    width: 100%;
+    position: relative;
+    top: -25px;
+}
+
+.backSide img{
+    width: 100%;
+    position: relative;
+    top: -25px;
+}
+.topSide img{
+    width: 100%;
+    position: relative;
+    top: -25px;
+}
+
+.bottomSide img{
+    width: 100%;
+    position: relative;
+    top: -25px;
+}
+
+.leftSide img{
+    width: 100%;
+    position: relative;
+    top: -24px;
+}
+
+.rightSide img{
+    width: 100%;
+    position: relative;
+    top: -25px;
+}
+
+
+
+
+
+ .four{
+    width: 5px;
+    height: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 2px;
+    background: white;
+    display: table;
+  
+  
+} 
+
+
+
+
+ @keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+
+/* @keyframes spin-vertical {
+	from { transform: rotateX(0); }
+	to { transform: rotateX(-360deg); }
+} */
+
+.cube1 {
+    animation: spin 2s infinite linear;
+    
+     /* animation:  spin-vertical 2s infinite linear; */
+}  
+.cube2 {
+    animation: spin 1s infinite linear;
+    
+     /* animation:  spin-vertical 2s infinite linear; */
+}  
+
